@@ -1,0 +1,382 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,100;1,500;1,600;1,700&family=Ubuntu&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  padding:0px;
+  margin:0px;
+}
+
+
+/*  */
+/*------------------------Scroll Bar-----------------------*/
+/* ::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fde65e;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #fde02f;
+} */
+
+
+
+
+.nav-bar {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(170, 119, 75);
+  box-shadow: 3px 3px 10px rgb(121, 140, 159);
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 0px;
+}
+
+.main{
+  background-color: bisque;
+}
+
+.logo {
+  flex: 1;
+  font-size: 40px;
+  padding: 20px;
+  margin-left: 50px;
+  font-family: Satisfy;
+}
+
+
+ul.menu {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.menu li {
+  flex: 1;
+  list-style-type: none;
+  font-size: 16px;
+  font-family: "Barlow Condensed";
+  text-align: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+
+.menu li a:hover {
+  color: midnightblue;
+  text-decoration: underline;
+}
+
+
+.services {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  background-color: bisque;
+}
+
+
+.service-item {
+  flex: 1;
+  /* padding: 10px 10px; */
+  border: lightcyan solid 1px;
+  text-align: center;
+  margin: 50px 50px;
+  transition: all 1s;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.service-item:hover {
+  box-shadow: 3px 3px 20px lightsteelblue;
+}
+
+
+.service-item h2 {
+  font-family: Barlow Condensed;
+  font-size: 18px;
+  width: 120px;
+  color: #001f38;
+  flex: 1;
+}
+
+.service-item img {
+  width: 60px;
+  height: 60px;
+  flex: 1;
+}
+
+.places {
+  top: 0;
+  z-index: 1;
+  margin-bottom: 0px;
+}
+
+places-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.places-text small {
+  font-family: Roboto;
+  text-align:center;
+  color: #ffc342;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.places-text h2 {
+  font-family: Barlow Condensed;
+  background-color: bisque;
+  text-align:center;
+  font-size: 55px;
+  color: #191d34;
+  letter-spacing: 1px;
+}
+.cards {
+  display: grid;
+  background-color: bisque;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+
+.card {
+  margin: 0;
+  padding:0;
+  border: 1px solid lightgray;
+  background-color: bisque;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 80%;
+  height: auto;
+}
+
+
+.card img {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.cards .text {
+  padding: 20px;
+  font-family: Barlow Condensed;
+  line-height: 50px;
+}
+
+
+.cards .card-box {
+  display: flex;
+  flex-flow: row;
+  background-color: #fde02f;
+  font-size: 18px;
+  font-family: Roboto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.cards .time {
+  flex: 1;
+}
+
+
+.cards .location {
+  flex: 2;
+}
+
+
+.cards .cost {
+  color: #4cafad;
+  font-size: 20px;
+}
+
+
+/*------------Zoom in Photos--------------*/
+.zoom-img {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+
+
+.zoom-img .img-card {
+  position: absolute;
+  overflow: hidden;
+}
+
+
+
+.img-card img {
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+
+
+
+.card:hover .zoom-img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
+
+.banner {
+  background-color: bisque;
+  top: 0;
+  z-index: 1;
+  margin-bottom: 0px;
+  display:inline-block;
+  padding:0px;
+  margin:0px;
+
+}
+
+
+.banner h1 {
+  font-family: Barlow Condensed;
+  background-color: bisque;
+  text-align:center;
+  font-size: 55px;
+  color: #191d34;
+  letter-spacing: 1px;
+}
+
+.banner form {
+
+    background-color: bisque;
+    width: 100%;
+    padding: 15px 350px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 0cap;
+  }
+
+  
+  form input {
+    display: block;
+    width: 50vw;
+    padding: 0rem 15.25rem;
+    border: 2px solid #000;
+    text-shadow: #191d34;
+    text-decoration-color: #000;
+    background-color:  #fde02f;
+}
+
+
+
+form input,
+input::placeholder {
+    font: 1.25rem/3 sans-serif;
+}
+
+
+
+.footer {
+  background-color: #AA774B;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 670px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.footer::before {
+  background-color: #AA774B;
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 36, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+.footer .links {
+  color: #AA774B;
+  /* position: relative; */
+  /* flex: 1;
+  display: flex; */
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links h2 {
+  background-color: #AA774B;
+}
+
+.links ul {
+  background-color: #AA774B;
+  list-style-type: none;
+}
+
+
+.links h2{
+  background-color: #AA774B;
+  font-weight: normal;
+  font-size: 23px;
+  margin-bottom: 15px;
+  padding:0px;
+  margin:0px;
+  
+}
+
+.links li {
+  font-family: Roboto;
+  cursor: pointer;
+  /* padding: 15px 0; */
+}
+.links li:hover {
+  color: #ffa801;
+}
